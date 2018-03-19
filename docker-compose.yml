@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  motion:
+    build: .
+    ports:
+     - '8081:8081'
+     - '8082:8082'
+     - '8083:8083'
+     - '8084:8084'
+    environment:
+     - TIMEZONE='Europe/London'
+    volumes:
+     - recordings:/var/lib/motion
+     - ./config/cameras:/etc/motion
+
+volumes:
+  recordings:
