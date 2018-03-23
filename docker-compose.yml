@@ -15,6 +15,7 @@ services:
     volumes:
      - recordings:/var/lib/motion
      - ./config/cameras:/etc/motion
+    restart: always
 
 volumes:
   recordings:
